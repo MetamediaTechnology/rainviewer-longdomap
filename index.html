@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./lib/rainradar.js"></script>
+    <style type="text/css">
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0px;
+        height: 100%;
+      }
+      #map {
+        height: 100%;
+      }
+      .control {
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://api.longdo.com/map/?key="
+    ></script>
+  </head>
+  <body>
+    <div class="control">
+      <button type="button" onclick="previos()">Previos</button>
+      <button type="button" onclick="radarNow()">Now</button>
+      <button type="button" onclick="play()">Play</button>
+      <button type="button" onclick="next()">Next</button>
+      <div id="radartime"></div>
+    </div>
+    <div id="map"></div>
+  </body>
+  <script>
+    var map = new longdo.Map({
+      placeholder: document.getElementById("map"),
+    });
+
+    var rainRadar = new RainRadar(map);
+
+    rainRadar.setColor(2);
+
+    function next() {
+      rainRadar.nextRadar();
+    }
+    function previos() {
+      rainRadar.reloadRadar();
+    }
+    function radarNow() {
+      rainRadar.radarNow();
+    }
+    function play() {
+      console.log(rainRadar.playAnimation());
+    }
+  </script>
+</html>
