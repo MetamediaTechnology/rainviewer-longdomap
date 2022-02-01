@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LongdoMap-Rainviewer</title>
-    <script src="./lib/rainradar.js"></script>
+    <script src="./lib/rainradarv2.js"></script>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,400;1,200&display=swap');
       html {
@@ -78,22 +78,11 @@
       timeDisplay: 'timeradar'
     });
 
-    function next() {
-      rainRadar.nextRadar();
+    function  next(){
+      rainRadar.next()
     }
-    function previos() {
-      rainRadar.previosRadar();
-    }
-    function radarNow() {
-      rainRadar.radarNow();
-    }
-    function play() {
-     let cb =  rainRadar.playAnimation(1500)
-     cb === true ? document.getElementById('play').innerHTML = 'Stop' : 'Play'
-     cb === false ? document.getElementById('play').innerHTML = 'Play' : 'Stop'
-    }
-    function clearLayer(){
-      rainRadar.clearLayers()
+    function previos(){
+      rainRadar.previos()
     }
   </script>
 </html>
