@@ -72,17 +72,27 @@
     });
 
     var rainRadar = new RainRadar(map,{
-      opacity: 0.5,
-      color: 4,
+      opacity: 0.8,
+      color: 2,
       tileSize: 256,
       timeDisplay: 'timeradar'
     });
-
+    function play() {
+     let cb =  rainRadar.playAnimation(700)
+     cb === true ? document.getElementById('play').innerHTML = 'Stop' : 'Play'
+     cb === false ? document.getElementById('play').innerHTML = 'Play' : 'Stop'
+    }
+    function radarNow(){
+      rainRadar.radarNow()
+    }
     function  next(){
       rainRadar.next()
     }
     function previos(){
       rainRadar.previos()
+    }
+    function clearLayer(){
+      rainRadar.clearLayers()
     }
   </script>
 </html>
