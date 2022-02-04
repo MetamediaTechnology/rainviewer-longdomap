@@ -40,4 +40,5 @@ playAnimation() // Change radar automation. You can set time (ms) in this funtio
 reload();       // Hot reload weather radar
 ```
 
+API Referance: https://www.rainviewer.com/ Thank you.
 
