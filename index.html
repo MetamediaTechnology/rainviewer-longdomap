@@ -50,7 +50,7 @@
     </style>
     <script
       type="text/javascript"
-      src="https://api.longdo.com/map/?key="
+      src="https://api.longdo.com/map/?key=4695081f1d38504afe7f6931cf375493"
     ></script>
   </head>
   <body>
@@ -73,13 +73,13 @@
 
     var rainRadar = new RainRadar(map,{
       opacity: 0.5,
-      color: 4,
+      color: 2,
       tileSize: 256,
       timeDisplay: 'timeradar'
     });
 
     function next() {
-      rainRadar.nextRadar();
+      rainRadar.next();
     }
     function previos() {
       rainRadar.previosRadar();
@@ -88,12 +88,16 @@
       rainRadar.radarNow();
     }
     function play() {
-     let cb =  rainRadar.playAnimation(1500)
-     cb === true ? document.getElementById('play').innerHTML = 'Stop' : 'Play'
-     cb === false ? document.getElementById('play').innerHTML = 'Play' : 'Stop'
+     const playButton = document.getElementById('play')
+     const isPlayed =  rainRadar.playAnimation(1000)
+     if(isPlayed){
+        playButton.innerHTML = 'Stop';
+     } else {
+        playButton.innerHTML = 'Play';
+     }
     }
     function clearLayer(){
-      rainRadar.clearLayers()
+      rainRadar.clearLayers(true)
     }
   </script>
 </html>
