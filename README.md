@@ -26,7 +26,7 @@ function init() {
 }
 ```
 STEP 4 : Complete with HTML
-Create Div element and using onload for creating map within tag
+Create Div element and using onload for creating map within tag.
 ```html
 <body onload="init();">
   <div id="map"></div>
@@ -39,13 +39,13 @@ Import rainradar.js into html file.
 <script src="./lib/rainradar.js"></script>
 ```
 
-Using JavaScript function for creating rain radar layer on map
+Using JavaScript function for creating rain radar layer on map.
 ```js
  var rainRadar = new rainradar(map,options);
 ```
 #### Parameter
-map : Map object (Required);
-options : Initial setup your rain radar (optional)
+map : Map object (Required).
+options : Initial setup your rain radar (optional).
 Example
 ```js
 {
@@ -57,15 +57,14 @@ Example
 ```
 #### Methods
 ```js
-setOpacity().   // Set opacity for layer 0 - 0.9
-setColor().     // Set color rain radar colors.
-rainNext();    // Next radar.
-rainBack(); // Previos radar.
-rainNow();     // Display current time rain radar.
-playAnimation() // Change radar automation. You can set time (ms) in this funtion
-reload();       // Hot reload weather radar
+setOpacity().     // Set opacity for layer 0 - 0.9
+setColor().       // Set color rain radar colors.
+rainNext();       // Next radar.
+rainBack();       // Previos radar.
+rainNow();        // Display current time rain radar.
+playAnimation()   // Change radar automation. You can set time (ms) in this funtion
+reload();          // Hot reload weather radar
 ```
-API ร่วมกับ Vue.js](https://map.longdo.com/blog/2019/12/03/longdo-map-api-vue-js/)
 
 ## References
 * [Longdo Map](https://map.longdo.com/products)
