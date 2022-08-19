@@ -15,7 +15,7 @@ Using the following script within tag
 ```js
 <script src="https://api.longdo.com/map/?key=[YOUR_KEY_API]"></script>
 ```
-STEP 3 : Initialize the Map
+STEP 2 : Initialize the Map
 Using JavaScript function for creating longdo.Map object within tag
 ```js
 var map;
@@ -25,7 +25,7 @@ function init() {
   });
 }
 ```
-STEP 4 : Complete with HTML
+STEP 3 : Complete with HTML
 Create Div element and using onload for creating map within tag.
 ```html
 <body onload="init();">
@@ -34,12 +34,11 @@ Create Div element and using onload for creating map within tag.
 ```
 
 #### Add script rainradar.js
-Import rainradar.js into html file.
+STEP1: Import rainradar.js into html file.
 ```js
 <script src="./lib/rainradar.js"></script>
 ```
-
-Using JavaScript function for creating rain radar layer on map.
+STEP2: Using JavaScript function for creating rain radar layer on map.
 ```js
  var rainRadar = new rainradar(map,options);
 ```
@@ -64,6 +63,46 @@ rainBack();       // Previos radar.
 rainNow();        // Display current time rain radar.
 playAnimation()   // Change radar automation. You can set time (ms) in this funtion
 reload();          // Hot reload weather radar
+```
+#### Summary
+```js
+ var map = new longdo.Map({
+      placeholder: document.getElementById("map"),
+    });
+
+    var rainRadar = new rainradar(map,{
+      opacity: 0.5,
+      color: 2,
+      tileSize: 256,
+      speed: 500,
+      timeDisplay: 'timeradar'
+    });
+
+    function next() {
+      rainRadar.rainNext();
+    }
+    function previos() {
+      rainRadar.rainBack();
+    }
+    function radarNow() {
+      rainRadar.rainNow();
+    }
+    function changeOpacity(e) {
+      const val = e.target.value
+      rainRadar.setOpacity(val)
+    }
+    function play() {
+     const playButton = document.getElementById('play')
+     const isPlayed =  rainRadar.playAnimation()
+     if(isPlayed){
+        playButton.innerHTML = 'Stop';
+     } else {
+        playButton.innerHTML = 'Play';
+     }
+    }
+    function clearLayer(){
+      rainRadar.clearLayers(true)
+    }
 ```
 
 ## References
