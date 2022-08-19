@@ -40,7 +40,7 @@ STEP1: Import rainradar.js into html file.
 ```
 STEP2: Using JavaScript function for creating rain radar layer on map.
 ```js
- var rainRadar = new rainradar(map,options);
+ var rainRadar = new RainRadar(map,options);
 ```
 #### Parameter
 map : Map object (Required).
@@ -56,13 +56,13 @@ Example
 ```
 #### Methods
 ```js
-setOpacity().     // Set opacity for layer 0 - 0.9
-setColor().       // Set color rain radar colors.
-rainNext();       // Next radar.
-rainBack();       // Previos radar.
-rainNow();        // Display current time rain radar.
-playAnimation()   // Change radar automation. You can set time (ms) in this funtion
-reload();          // Hot reload weather radar
+setOpacity()     // Set opacity for layer 0 - 0.9
+setColor()       // Set color rain radar colors.
+rainNext()       // Next radar.
+rainBack()       // Previos radar.
+rainNow()        // Display current time rain radar.
+playAnimation()  // Change radar automation. You can set time (ms) in this funtion
+reload()         // Hot reload weather radar
 ```
 #### Summary
 ```js
@@ -92,16 +92,16 @@ reload();          // Hot reload weather radar
       rainRadar.setOpacity(val)
     }
     function play() {
-     const playButton = document.getElementById('play')
-     const isPlayed =  rainRadar.playAnimation()
-     if(isPlayed){
+     const playButton = document.getElementById('play');
+     const isPlayed =  rainRadar.playAnimation();
+     if (isPlayed) {
         playButton.innerHTML = 'Stop';
      } else {
         playButton.innerHTML = 'Play';
      }
     }
-    function clearLayer(){
-      rainRadar.clearLayers(true)
+    function clearLayer() {
+      rainRadar.clearLayers();
     }
 ```
 
