@@ -1,7 +1,6 @@
 ![Longdo Map Logo](https://map.longdo.com/themes/longdo/logo.png)
 
-# rainviewer - longomap
-Longdo Map rain radar 
+# Rain Viewer - Longo Map JS API 2
 <img width="1440" alt="Screen Shot 2564-09-19 at 17 37 55" src="https://user-images.githubusercontent.com/20718635/133924425-1861cb95-9539-4262-ad4a-eb6a75052352.png">
 
 ## Getting Started
@@ -40,7 +39,7 @@ STEP1: Import rainradar.js into html file.
 ```
 STEP2: Using JavaScript function for creating rain radar layer on map.
 ```js
- var rainRadar = new RainRadar(map,options);
+ var rainRadar = new RainRadar(map, options);
 ```
 #### Parameter
 map : Map object (Required).
@@ -51,7 +50,10 @@ Example
   opacity: 0.5,                // Opacity display in map.
   color: 4,                    // Color radar you can read more at : https://www.rainviewer.com/api/color-schemes.html
   tileSize: 256,              // image size, can be 256 or 512.
-  timeDisplay: 'timeradar'    // If you want to display time of radar you can set id element.
+  timeDisplay: 'timeradar',   // If you want to display time of radar you can set id element.
+  smooth: 0,                  // blur (1) or not (0) radar data. Large composite images are always not smoothed due to performance issues.
+  snow: 1,                    // display (1) or not (0) snow in separate colors on the tiles.
+  speed: 2000                 // set speed for animation frame (milisecond)
  }
 ```
 #### Methods
