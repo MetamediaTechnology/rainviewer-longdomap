@@ -49,6 +49,7 @@ Example
 {
   opacity: 0.5,                // Opacity display in map.
   color: 4,                    // Color radar you can read more at : https://www.rainviewer.com/api/color-schemes.html
+  locale: 'th-Th',            // Locale of displying datetime eg. "th-Th", "en-Us"
   tileSize: 256,              // image size, can be 256 or 512.
   timeDisplay: 'timeradar',   // If you want to display time of radar you can set id element.
   smooth: 0,                  // blur (1) or not (0) radar data. Large composite images are always not smoothed due to performance issues.
@@ -60,6 +61,7 @@ Example
 ```js
 setOpacity()     // Set opacity for layer 0 - 0.9
 setColor()       // Set color rain radar colors.
+setLocale()      // Set locale of displying datetime eg. "th-Th", "en-Us"
 rainNext()       // Next radar.
 rainBack()       // Previos radar.
 rainNow()        // Display current time rain radar.
