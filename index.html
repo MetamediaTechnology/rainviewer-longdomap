@@ -29,7 +29,7 @@
     </style>
     <script
       type="text/javascript"
-      src="https://api.longdo.com/map/?key=4695081f1d38504afe7f6931cf375493"
+      src="https://api.longdo.com/map3/?key=4695081f1d38504afe7f6931cf375493"
     ></script>
   </head>
   <body>
@@ -64,10 +64,10 @@
       placeholder: document.getElementById("map"),
     });
 
-    var rainRadar = new rainradar(map,{
+    var rainRadar = new RainRadar(map,{
       opacity: 0.5,
       color: 2,
-      tileSize: 256,
+      tileSize: 512,
       speed: 500,
       timeDisplay: 'timeradar'
     });
