@@ -1,7 +1,7 @@
 ![Longdo Map Logo](https://map.longdo.com/themes/longdo/logo.png)
 
 # Rain Viewer - Longo Map JS API 2
-<img width="1440" alt="Screen Shot 2564-09-19 at 17 37 55" src="https://user-images.githubusercontent.com/20718635/133924425-1861cb95-9539-4262-ad4a-eb6a75052352.png">
+<img width="1440" alt="Screen Shot 2564-09-19 at 17 37 55" src="https://github.com/MetamediaTechnology/rainviewer-longdomap/screenshot/preview.git">
 
 ## Getting Started
 ### Usage
