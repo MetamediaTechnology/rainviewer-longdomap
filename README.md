@@ -1,7 +1,7 @@
 ![Longdo Map Logo](https://map.longdo.com/themes/longdo/logo.png)
 
 # Rain Viewer - Longo Map JS API 2
-![Rain Viewer on Longdo Map](https://raw.githubusercontent.com/LongdoMap/rainviewer-longdomap/main/screenshot/preview.gif)
+![Rain Viewer on Longdo Map](https://raw.githubusercontent.com/MetamediaTechnology/rainviewer-longdomap/main/screenshot/preview.gif)
 
 This plugin integrates RainViewer's weather radar data with the Longdo Map JS API, allowing you to display real-time precipitation radar on your maps.
 
