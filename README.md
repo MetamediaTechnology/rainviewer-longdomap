@@ -1,6 +1,7 @@
 ![Longdo Map Logo](https://map.longdo.com/themes/longdo/logo.png)
 
-# Rain Viewer - Longdo Map JS API 2
+# Rain Viewer - Longdo Map JS API 3
+
 ![Rain Viewer on Longdo Map](https://raw.githubusercontent.com/MetamediaTechnology/rainviewer-longdomap/main/screenshot/preview.gif)
 
 This plugin integrates RainViewer’s weather radar data with the Longdo Map JS API, allowing you to display real-time precipitation radar directly on your maps.
@@ -12,15 +13,19 @@ This plugin integrates RainViewer’s weather radar data with the Longdo Map JS 
 To begin, you’ll need a [Longdo Map API key](https://map.longdo.com/docs/javascript/getapi).  
 Once you have your API key and have cloned this project, register the key in your `index.html` file.
 
-
 #### Register map api key
+
 STEP 1 : Loading the API Code Libraries
 Using the following script within tag
+
 ```js
 <script src="https://api.longdo.com/map/?key=[YOUR_KEY_API]"></script>
+
 ```
+
 Step 2: Initialize the Map
 Create a longdo.Map object with JavaScript:
+
 ```js
 var map;
 function init() {
@@ -28,9 +33,12 @@ function init() {
     placeholder: document.getElementById('map')
   });
 }
+
 ```
+
 Step 3: Complete HTML Structure
 Include the map container and use onload to initialize the map:
+
 ```html
 <body onload="init();">
   <div id="map"></div>
@@ -38,18 +46,25 @@ Include the map container and use onload to initialize the map:
 ```
 
 #### Import rainradar.js
+
 STEP1: Import rainradar.js into html file.
+
 ```js
 <script src="./lib/rainradar.js"></script>
 ```
+
 STEP2: Create the Rain Radar Layer
+
 ```js
  var rainRadar = new RainRadar(map, options);
 ```
+
 #### Parameter
+
 map : Map object (Required).
 options : Initial setup your rain radar (optional).
 Example
+
 ```js
 var rainRadar = new RainRadar(map, {
   opacity: 0.5,               // Opacity level
@@ -62,7 +77,9 @@ var rainRadar = new RainRadar(map, {
   speed: 2000                 // Animation speed (ms)
 });
 ```
+
 #### Available Methods
+
 ```js
 setOpacity(value)     // Set layer opacity (0 - 0.9)
 setColor(value)       // Set radar color scheme
@@ -74,7 +91,9 @@ playAnimation(speed)  // Toggle radar animation, optional speed (ms)
 reload()              // Reload radar data
 clearLayers()         // Clear all radar layers
 ```
+
 #### Example Usage
+
 ```js
 var map = new longdo.Map({
   placeholder: document.getElementById("map")
@@ -117,6 +136,7 @@ function clearLayer() {
 ```
 
 ## References
+
 * [Longdo Map](https://map.longdo.com/products)
 * [Longdo Map API Documentation](https://map.longdo.com/docs/)
 * [RainViewer API](https://www.rainviewer.com/th/api.html)
